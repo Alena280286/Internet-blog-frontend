@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build-gp": "ng build --output-path docs --base-href /Internet-shop-frontend/",
+    "build-gp": "ng build --output-path docs --base-href /Internet-blog-frontend/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
