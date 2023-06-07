@@ -1,0 +1,106 @@
+@import "../../assets/styles/variables";
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: $light-blue-text-color;
+  margin-bottom: 10px;
+}
+
+.button {
+  background: #709FDC;
+  border-radius: 5px;
+  color: $white-text-color;
+  border: 0;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+
+  &:disabled {
+    background: gray;
+    cursor: not-allowed;
+  }
+}
+
+//.input {
+//  box-sizing: border-box;
+//  padding: 17px 20px;
+//  border: 2px solid #709FDC;
+//  border-radius: 3px;
+//  font-family: 'Montserrat', sans-serif;
+//  font-weight: 400;
+//  font-size: 14px;
+//  color: $dark-blue-text-color;
+//}
+
+.mdc-list-item__primary-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: $dark-blue-text-color;
+  text-align: center;
+}
+
+.mat-mdc-select-value {
+  line-height: 18px;
+}
+
+.mat-mdc-select-arrow-wrapper {
+  display: none !important;
+}
+
+.mat-mdc-option {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: $light-blue-text-color;
+}
+
+.input, .mat-mdc-select.custom-mat-select .mat-mdc-select-value, {
+  padding: 17px 20px;
+  box-sizing: border-box;
+  border: 2px solid $light-blue-text-color;
+  border-radius: 3px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: $dark-blue-text-color;
+  outline: none;
+  margin-bottom: 5px;
+  width: 422px;
+
+  &:hover, &:focus {
+    border-color: $light-blue-text-color;
+  }
+
+  &::placeholder {
+    color: #BEBEBE;
+  }
+}
+
+.error-message {
+  color: red;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  width: 422px;
+  font-size: 14px;
+}
+
+.socials:hover svg {
+  stroke: #7395e7;
+
+}
