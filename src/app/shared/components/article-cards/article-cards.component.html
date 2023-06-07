@@ -1,0 +1,17 @@
+<div class="article-card" *ngIf="articles" >
+  <div class="article-image" style="background: url('assets/images/articles/{{articles.image}}')">
+    <div class="label-name-article">
+      {{articles.category}}
+    </div>
+  </div>
+
+  <div class="article-title">
+    {{articles.title}}
+  </div>
+  <div class="article-description">
+    {{articles.description}}
+  </div>
+  <div class="article-more-link">
+    <a [routerLink]="'/article/' + articles.url"> Читать дальше </a>
+  </div>
+</div>

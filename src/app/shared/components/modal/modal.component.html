@@ -1,0 +1,64 @@
+<div class="modal" [class.is-light]="isLight" *ngIf="!isSubmitted">
+  <div class="container">
+    <div class="close-modal" (click)="onCloseModal()">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="1.93562" y1="2.64999" x2="13.9564" y2="14.6708" stroke="#BEBEBE" stroke-linecap="round"/>
+        <line x1="13.9236" y1="2.62978" x2="1.90277" y2="14.6506" stroke="#BEBEBE" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="modal-title">
+      {{isLight ? 'Бесплатная консультация' : 'Заявка на услугу'}}
+    </div>
+    <div class="modal-inputs">
+      <form [formGroup]="formModal" class="modal-form">
+        <mat-select formControlName="services" class="custom-mat-select" *ngIf="!isLight"
+                    [ngStyle]="{'border-color': formModal.get('services')?.invalid
+                 && (formModal.get('services')?.dirty || formModal.get('services')?.touched) ? 'red' : '' }">
+          <mat-option *ngFor="let category of filteredCategories" [value]="category.name">{{category.name}}</mat-option>
+        </mat-select>
+
+        <input class="input" formControlName="name"
+               [ngStyle]="{'border-color': formModal.get('name')?.invalid
+                 && (formModal.get('name')?.dirty || formModal.get('name')?.touched) ? 'red' : '' }"
+               placeholder="Ваше имя">
+        <div class="error-message" *ngIf="formModal.get('name')?.invalid && (formModal.get('name')?.dirty
+          || formModal.get('name')?.touched)">
+          Необходимо написать ваше имя
+        </div>
+
+        <input class="input" formControlName="phone"
+               [ngStyle]="{'border-color': formModal.get('phone')?.invalid
+                 && (formModal.get('phone')?.dirty || formModal.get('phone')?.touched) ? 'red' : '' }"
+               placeholder="Ваш номер телефона">
+        <div class="error-message" *ngIf="formModal.get('phone')?.invalid && (formModal.get('phone')?.dirty
+          || formModal.get('phone')?.touched)">
+          Необходимо написать ваш номер телефона
+        </div>
+
+      </form>
+    </div>
+    <button type="button" class="button btn-modal"
+            [disabled]="formModal.invalid || formModal.disabled"
+            (click)="onSubmit()">{{isLight ? 'Заказать консультацию' : 'Оставить заявку'}}
+    </button>
+  </div>
+</div>
+
+<div class="modal-thanks" [ngClass]="{'is-light': showThanks}" *ngIf="isSubmitted">
+  <div class="container">
+    <div class="close-modal" (click)="onCloseModal()">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="1.93562" y1="2.64999" x2="13.9564" y2="14.6708" stroke="#BEBEBE" stroke-linecap="round"/>
+        <line x1="13.9236" y1="2.62978" x2="1.90277" y2="14.6506" stroke="#BEBEBE" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="modal-title-thanks">
+      Спасибо за вашу заявку!
+    </div>
+    <div class="modal-text-waiting">
+      Мы свяжемся с вами при первой же возможности.
+    </div>
+    <button type="button" class="button" (click)="onOkClick()">Окей</button>
+  </div>
+</div>
+

@@ -1,0 +1,26 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/global";
+@import "../../assets/styles/mixins";
+
+.user-agreement{
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  .container{
+    .agreement-title{
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      font-size: 30px;
+      color: #1E1A2B;
+      margin-bottom: 40px;
+    }
+    .agreement-text{
+      text-indent: 1em;
+      font-family: 'Montserrat', sans-serif;
+      color: #1E1A2B;
+      line-height: 120%;
+      font-size: 16px;
+    }
+  }
+}

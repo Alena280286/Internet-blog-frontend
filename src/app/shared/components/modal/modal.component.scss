@@ -1,0 +1,98 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/global";
+@import "../../../../assets/styles/mixins";
+
+.modal {
+  padding: 94px 152px 86px 152px;
+  position: relative;
+  width: 727px;
+  box-sizing: border-box;
+  border-radius: 10px;
+
+  .close-modal {
+    position: absolute;
+    cursor: pointer;
+    top: 30px;
+    right: 30px;
+    margin-bottom: 50px;
+  }
+
+  .modal-title {
+    @include head-lora-38;
+    color: $light-blue-text-color;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    margin-left: -27px;
+    text-align: center;
+  }
+
+  .modal-inputs {
+    .input {
+      width: 422px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .btn-modal {
+    padding: 15px 143px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: $white-text-color;
+    margin-top: 20px;
+    max-width: 422px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    white-space: nowrap;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.modal-thanks {
+  padding: 163px 142px;
+  position: relative;
+  width: 727px;
+  box-sizing: border-box;
+  border-radius: 10px;
+
+  .close-modal {
+    position: absolute;
+    cursor: pointer;
+    top: 30px;
+    right: 30px;
+    margin-bottom: 50px;
+  }
+
+  .modal-title-thanks {
+    margin-bottom: 20px;
+    @include head-lora-38;
+    color: $light-blue-text-color;
+    max-width: 422px;
+    white-space: nowrap;
+  }
+
+  .modal-text-waiting {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: #1E1A2B;
+    margin-bottom: 40px;
+  }
+
+  .button {
+    width: 73px;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    box-sizing: border-box;
+    color: $white-text-color;
+    display: block;
+    margin: 0 auto;
+  }
+}
+

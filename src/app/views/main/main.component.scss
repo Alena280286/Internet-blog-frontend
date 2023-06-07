@@ -1,0 +1,476 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/global";
+@import "../../../assets/styles/mixins";
+
+.main {
+  padding-bottom: 60px;
+  position: relative;
+
+  .container {
+    width: 100%;
+
+    .slider {
+      padding: 100px 0 98px 80px;
+      background-clip: border-box;
+      background-repeat: no-repeat;
+      width: 656px;
+      //height: 100%;
+
+      .slider-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-repeat: no-repeat;
+        background-size: 750px 500px;
+        background-position-x: right;
+        z-index: -1;
+      }
+
+      .subtitle-slider {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        color: $light-blue-text-color;
+      }
+
+      .title-offer-slider {
+        @include head-lora-50_white;
+        max-width: 576px;
+
+        span {
+          color: $light-blue-text-color;
+        }
+      }
+
+      .slider-description {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 130%;
+        color: $white-text-color;
+        width: 456px;
+        margin-top: 20px;
+      }
+
+      .btn-slider {
+        margin-top: 50px;
+        padding: 15px 33px;
+
+        &:first-child {
+          margin-bottom: 40px;
+        }
+      }
+    }
+
+    .arrows-promotion {
+      display: flex;
+      position: absolute;
+      top: calc(50% - 60px);
+      z-index: 2;
+      cursor: pointer;
+
+      .left-arrow {
+        margin-left: 10px;
+        margin-right: 1189px;
+      }
+
+    }
+
+    .owl-dots {
+      position: absolute;
+      top: 448px;
+      left: 0;
+      right: 0;
+    }
+
+    .owl-theme .owl-dots .owl-dot span {
+      background: transparent;
+      border: 1px solid #FFFFFF;
+    }
+
+    .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+      background: #FFFFFF;
+    }
+  }
+}
+
+.services {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .container {
+    .services-title {
+      @include head-lora-38;
+      margin-bottom: 40px;
+    }
+
+    .services-card {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+
+      .services-info-card {
+        .images-services {
+          width: 100%;
+          border-radius: 5px;
+          margin-bottom: 15px;
+        }
+
+        .title-services {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 500;
+          font-size: 20px;
+          color: $light-blue-text-color;
+          margin-bottom: 10px;
+        }
+
+        .description-services {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 130%;
+          color: $dark-blue-text-color;
+          width: 286px;
+          height: 90px;
+        }
+
+        .services-actions-price {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 15px;
+
+          .price-services {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            color: $light-blue-text-color;
+          }
+
+          .btn-services {
+            padding: 15px 33px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.aboutUs {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .container {
+    display: flex;
+    align-items: center;
+
+    .image-aboutUs {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .aboutUs-info {
+      .aboutUs-header-title {
+        @include head-lora-38;
+        margin-bottom: 20px;
+      }
+
+      .aboutUs-header-description {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 130%;
+        color: $dark-purple-title-color;
+        width: 633px;
+        margin-bottom: 40px;
+
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .our-advantages {
+      .title-advantages {
+        @include head-lora-26;
+        margin-bottom: 20px;
+      }
+
+      .info-advantages {
+        display: grid;
+        grid-template-columns: repeat(2, 311px);
+        align-items: start;
+        grid-gap: 20px 71px;
+
+        .item-advantages {
+          display: flex;
+          align-items: center;
+
+
+          .number-advantages {
+            position: relative;
+            margin-right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #B9D5FD;
+            flex-shrink: 0;
+
+            span {
+              @include head-lora-50_blue;
+              text-align: center;
+              position: absolute;
+              bottom: -5px;
+              left: 8px;
+            }
+          }
+
+          .description-advantages {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 130%;
+            color: $dark-purple-title-color;
+
+
+            span {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.popular-articles {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .container {
+
+    .title-popular-articles {
+      @include head-lora-38;
+      margin-bottom: 40px;
+    }
+
+    .articles-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .go-to-blog {
+      margin-top: 20px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      cursor: pointer;
+
+      a {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+        color: $light-blue-text-color;
+        margin-right: 14px;
+      }
+    }
+  }
+}
+
+.reviews {
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+  .container {
+
+    .reviews-title {
+      @include head-lora-38;
+      margin-bottom: 20px;
+    }
+
+    .reviews-carousel {
+      position: relative;
+
+      .review-item {
+        width: 396px;
+        height: 267px;
+        padding: 30px;
+        border: 2px solid #709FDC;;
+        border-radius: 5px;
+        box-sizing: border-box;
+
+        .review-item-head {
+          display: flex;
+          align-items: center;
+
+          .review-item-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-position: center;
+            background-size: cover;
+            margin-right: 26px;
+          }
+
+          .review-item-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            color: $light-blue-text-color;
+          }
+        }
+
+        .review-item-text {
+          margin-top: 15px;
+          font-size: 16px;
+          line-height: 140%;
+          color: $dark-blue-text-color;
+        }
+      }
+
+      .reviews-arrows {
+        display: flex;
+
+        a {
+          top: calc(50% - 5px);
+          display: flex;
+          position: absolute;
+          cursor: pointer;
+
+          svg {
+            stroke: #709FDC;
+          }
+
+          &.move-backward {
+            left: -24px;
+          }
+
+          &.move-forward {
+            right: -24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.map-info {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .container {
+    display: flex;
+    justify-content: flex-start;
+
+    .map {
+      width: 607px;
+      box-sizing: border-box;
+      margin-right: 26px;
+
+      iframe {
+        border-radius: 5px;
+      }
+    }
+
+    .info-contacts {
+      .contacts {
+        @include head-lora-38;
+        margin-bottom: 20px;
+      }
+
+      .address-info {
+        margin-bottom: 20px;
+
+        .address {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 500;
+          font-size: 20px;
+          color: $light-blue-text-color;
+          margin-bottom: 10px;
+        }
+
+        .address-text {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 130%;
+          color: $dark-blue-text-color;
+          width: 501px;
+        }
+      }
+
+      .phone-info {
+        margin-bottom: 20px;
+
+        .phone {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 500;
+          font-size: 20px;
+          color: $light-blue-text-color;
+          margin-bottom: 10px;
+        }
+
+        .phone-text {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          color: $dark-blue-text-color;
+          cursor: pointer;
+          text-decoration: none;
+        }
+      }
+
+      .email-info {
+        margin-bottom: 20px;
+
+        .email {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 500;
+          font-size: 20px;
+          color: $light-blue-text-color;
+          margin-bottom: 10px;
+        }
+
+        .email-text {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          color: $dark-blue-text-color;
+          cursor: pointer;
+          text-decoration: none;
+        }
+      }
+
+      .social-info {
+        margin-bottom: 20px;
+
+        .us-social {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 500;
+          font-size: 20px;
+          color: $light-blue-text-color;
+          margin-bottom: 10px;
+        }
+
+        .icons-social {
+          display: flex;
+
+          a {
+            margin-right: 20px;
+            cursor: pointer;
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

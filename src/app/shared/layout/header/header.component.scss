@@ -1,0 +1,101 @@
+@import "../../../../assets/styles/variables";
+
+header.header {
+  padding: 40px 0 40px 0;
+
+  .container {
+
+    .header-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .logo {
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .header-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 50px;
+        margin-right: 55px;
+
+        nav ul {
+          margin: 0;
+          padding: 0;
+          display: flex;
+
+          li {
+            margin-right: 30px;
+            list-style: none;
+
+            &:last-child {
+              margin-right: 0;
+            }
+
+            a {
+              font-family: 'Montserrat', sans-serif;
+              font-weight: 500;
+              font-size: 16px;
+              color: $dark-blue-text-color;
+              cursor: pointer;
+              text-decoration: none;
+
+              &:hover {
+                color: $light-blue-text-color;
+              }
+              &.active {
+                color: $light-blue-text-color;
+              }
+
+            }
+          }
+        }
+      }
+
+      .header-phone {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        color: $light-blue-text-color;
+        text-decoration: none;
+        margin-right: 55px;
+      }
+
+      .header-login {
+        a {
+          cursor: pointer;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+
+          svg {
+            margin-right: 9px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+
+          .header-login-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            color: $dark-blue-text-color;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.log-out {
+  display: flex;
+
+  span {
+    margin-right: 9px;
+  }
+}

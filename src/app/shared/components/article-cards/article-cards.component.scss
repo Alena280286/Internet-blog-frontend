@@ -1,0 +1,73 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+
+.article-card {
+  height: 571px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+
+  .article-image {
+    position: relative;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    width: 291px;
+    height: 291px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+
+    .label-name-article {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: $white-text-color;
+      border-radius: 5px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 11px;
+      color: $light-blue-text-color;
+      text-align: center;
+      padding: 10px 18px;
+    }
+  }
+
+  .article-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    color: $light-blue-text-color;
+    width: 291px;
+    height: 78px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+
+  .article-description {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: $dark-blue-text-color;
+    width: 291px;
+    height: 144px;
+    overflow: hidden;
+  }
+
+  .article-more-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration-line: underline;
+    color: $light-blue-text-color;
+    margin-top: 30px;
+    cursor: pointer;
+
+    .article-more-link a:active {
+      color: $light-blue-text-color;
+    }
+    a:visited {
+      color: $light-blue-text-color;
+    }
+  }
+}

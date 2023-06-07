@@ -1,0 +1,135 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/global";
+
+footer.footer {
+  padding: 40px 0 54px 0;
+  background: #B9D5FD;
+
+  .container {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+
+    .footer-logo-menu {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 40px;
+
+      .footer-menu {
+        display: flex;
+        margin-left: 43px;
+
+        nav ul {
+          margin: 0;
+          padding: 0;
+          display: flex;
+
+          li {
+            margin-right: 20px;
+            list-style: none;
+
+            &:last-child {
+              margin-right: 0;
+            }
+
+            a {
+              font-size: 16px;
+              color: $dark-blue-text-color;
+              cursor: pointer;
+              text-decoration: none;
+
+              &:hover {
+                color: $light-blue-text-color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .footer-info {
+      display: flex;
+      justify-content: flex-start;
+
+
+      .footer-address-info {
+        width: 253px;
+        margin-right: 60px;
+
+        .footer-address {
+          font-size: 16px;
+          line-height: 130%;
+          color: $dark-blue-text-color;
+        }
+      }
+
+      .footer-phone-info {
+        display: flex;
+        flex-direction: column;
+        width: 142px;
+        margin-right: 60px;
+
+        .footer-phone {
+          font-size: 16px;
+          color: $dark-blue-text-color;
+          text-decoration: none;
+          cursor: pointer;
+          margin-bottom: 10px;
+        }
+
+        .btn-footer-call {
+          font-weight: 500;
+          font-size: 12px;
+          padding: 10px;
+        }
+      }
+
+      .footer-email-info {
+        margin-right: 60px;
+
+        a {
+          font-size: 14px;
+          color: $dark-blue-text-color;
+          cursor: pointer;
+          text-decoration: none;
+        }
+      }
+
+      .footer-social-info {
+        .footer-title {
+          margin-bottom: 15px;
+        }
+
+        .footer-social-icons {
+          cursor: pointer;
+          display: flex;
+          justify-content: flex-start;
+
+          a {
+            margin-right: 16px;
+            .vk {
+              margin-right: 12px;
+            }
+
+            .fb {
+              margin-right: 12px;
+            }
+          }
+          .hover:hover svg {
+            stroke: #1E1A2B;
+          }
+
+        }
+      }
+    }
+
+    .footer-right {
+      margin-top: 6px;
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      color: $light-blue-text-color;
+    }
+  }
+}
